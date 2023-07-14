@@ -1,0 +1,14 @@
+**/*.iml
+**/*.log
+**/.env
+**/.env.docker
+**/.nvmrc
+**/dist/
+**/node_modules/
+**/npm-debug.log*
+.DS_Store
+.idea/
+.vimrc
+.vscode/
+.data/
+ssl/

@@ -1,0 +1,27 @@
+{
+  "name": "creaition-test-ws",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@types/node": "^18.15.0",
+    "babel-plugin-named-asset-import": "^0.3.8",
+    "cookie": "^0.5.0",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.1.1",
+    "nats": "^1.4.12",
+    "rimraf": "^5.0.0",
+    "socket.io": "^4.6.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "rimraf dist && tsc",
+    "start": "NODE_ENV=production node ./dist/index.js"
+  }
+}

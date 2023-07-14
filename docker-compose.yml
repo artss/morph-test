@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: packages/web/Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+      - WS_URL=http://ws:8001
+    volumes:
+      - ./packages/web:/srv/packages/web
+    ports:
+      - '8000:8000'
+    depends_on:
+      - ws
+
+  ws:
+    build:
+      context: .
+      dockerfile: packages/ws/Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./packages/ws:/srv/packages/ws
+    ports:
+      - '8001:8001'
